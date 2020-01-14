@@ -4,7 +4,6 @@ var today_data;
 var stepsEveryHour = [];
 var cal,  battery_remain;
 var uluru = [];
-var demo1, demo2, demo3;
 var d = new Date();
 var m = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" ]
 var options = {
@@ -15,7 +14,8 @@ var options = {
   prefix : '',
   suffix : ''
   };
-var date = d.getFullYear()+"-"+(m[d.getMonth()])+"-"+d.getDate();
+//var date = d.getFullYear()+"-"+(m[d.getMonth()])+"-"+d.getDate();
+var date = "2020-1-13"
 document.getElementById("lastupdate").innerHTML = date;
 function getData(date){
   $.ajax({
@@ -222,28 +222,6 @@ function updateBat() {
 }
 
 function setupMap(){
-  date = "2020-1-13";
-  uluru = [];
-  $.ajax({
-    type: "POST",
-    url: "https://campus.kits.tw/ICN_API" + macaddr + "&date_filter=" + date + " 00:00:00" + "+-+" + date + " 23:59:59",
-    dataType: "json",
-    async: false,
-    headers: {
-      'Accept': 'application/json',
-      'Authorization': 'Bearer ' + AccessToken
-    },
-    success: function(response) {
-      today_data = response;
-    },
-    error: function(jqXHR) {
-      if(jqXHR.status == '200')
-        alert("API calling error: macaddr or url format error!");
-      else
-        alert("API is sleeping !");
-    }
-  });
-
   for(var i = 0; i < today_data.length; i++){
     if(today_data[i]['lat'] != null){
       uluru.push({lat: parseFloat(today_data[i]['lat']), lng: parseFloat(today_data[i]['lng'])});
