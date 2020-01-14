@@ -14,8 +14,7 @@ var options = {
   prefix : '',
   suffix : ''
   };
-//var date = d.getFullYear()+"-"+(m[d.getMonth()])+"-"+d.getDate();
-var date = "2020-1-13"
+var date = (location.hash == "#demo") ? "2020-1-13" : d.getFullYear()+"-"+(m[d.getMonth()])+"-"+d.getDate();
 document.getElementById("lastupdate").innerHTML = date;
 function getData(date){
   $.ajax({
@@ -262,7 +261,7 @@ function setupMap(){
 function initHere(){
   $( document ).ready(function() {
     //console.log("boom");
-    getData("2020-01-13");
+    getData(date);
     setTimeout(function(){
       setupMap();
     },1000);
