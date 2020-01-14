@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Complex Health Detector Alpha-003</title>
+  <title>複合型健康指標偵測器 Alpha-003</title><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Noto+Sans+TC&amp;display=swap'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="block" id="title">
+    <div class="big">複合型健康指標偵測器
+      <div>Alpha-003</div>
+    </div>
+    <div class="small_word" id="lastupdate"></div>
+  </div>
+  <div class="block" id="steps">
+    <div id="chartcontainer">
+      <canvas id="stepchart"></canvas>
+    </div>
+    <div id="stepwords">
+      <div class="small_word" id="todayword">今日步數</div>
+      <div id="stepnum"></div>
+      <div class="small_word">目標 10,000步</div>
+    </div>
+  </div>
+  <div class="block" id="details">
+    <div id="cal"> 
+      <div class="yellowback">熱量消耗</div>
+      <div id="calwords">
+        <div id="calnum"></div>
+        <div class="small_word">kCal</div>
+      </div>
+    </div>
+    <div id="bat">
+      <div class="yellowback">剩餘電量</div>
+      <div id="batwords">
+        <div id="batnum"></div>
+        <div class="small_word">%</div>
+      </div>
+    </div>
+  </div>
+  <div class="block" id="charts">
+    <div class="yellowback">時間報表</div>
+    <div id="chartcontainer2">
+      <canvas id="hourchart"></canvas>
+    </div>
+  </div>
+  <div class="block" id="map">
+    <div class="yellowback">足跡地圖</div>
+    <div id="mapcontainer"></div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js'></script>
+<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD8Lh3rOBRpwv-IYQeH6vnWUjrHztMu86A'></script><script  src="./script.js"></script>
+
+</body>
+</html>

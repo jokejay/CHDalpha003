@@ -1,0 +1,140 @@
+* {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  position: relative;
+}
+
+body {
+  background-color: #FFC954;
+}
+
+.container {
+  margin: 100px auto;
+  border: #444 4px solid;
+  width: 60%;
+  max-width: 800px;
+  min-width: 600px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container .block {
+  height: 400px;
+  font-size: 10px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #EEE;
+}
+.container #title {
+  height: 130px;
+  padding: 15px 20px;
+  border-bottom: #444 4px solid;
+  background-color: #FF3D4A;
+}
+.container #title .big {
+  font-size: 40px;
+  color: #f3f3f3;
+  font-weight: 400;
+}
+.container #title .big div {
+  display: inline;
+}
+.container #title #lastupdate {
+  color: #f3f3f3;
+  text-align: left;
+  margin-top: 10px;
+}
+.container #steps {
+  width: 100%;
+}
+.container #steps #chartcontainer {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container #steps #stepwords {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+}
+.container #steps #stepwords #stepnum {
+  color: #4b8ede;
+  text-align: center;
+}
+.container #steps #stepwords #todayword {
+  height: 40px;
+}
+.container #details {
+  width: 100%;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container #cal, .container #bat {
+  padding-left: 20px;
+  padding-top: 10px;
+  color: #444;
+}
+.container #calwords, .container #batwords {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  color: #e87144;
+  font-size: 60px;
+}
+.container #calwords #calnum, .container #calwords #batnum, .container #batwords #calnum, .container #batwords #batnum {
+  display: inline;
+}
+.container #calwords .small_word, .container #batwords .small_word {
+  display: inline;
+}
+.container #batwords {
+  width: 120px;
+}
+.container #charts {
+  width: 100%;
+  height: 280px;
+  padding: 10px 20px;
+}
+.container #charts #chartcontainer2 {
+  height: 200px;
+  padding: 10px;
+}
+.container #map {
+  width: 100%;
+  padding: 10px 20px;
+  height: 500px;
+}
+.container #map #mapcontainer {
+  height: 400px;
+  border: 4px #FF3D4A solid;
+}
+
+.small_word {
+  font-size: 20px;
+  text-align: center;
+}
+
+.yellowback {
+  margin: 10px;
+  border-bottom: #FFC954 4px solid;
+  width: 80px;
+  font-weight: 900;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #444;
+}
+
+@media screen and (max-width: 1100px) {
+  .container #title .big div {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+  }
+}
