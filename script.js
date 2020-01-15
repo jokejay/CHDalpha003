@@ -19,7 +19,7 @@ var date;
 if(urlkeyw == "#demo"){
   date = "2020-1-13";
 } else if(urlkeyw.length == 7){
-  date = urlkeyw.slice(1, 3)+"-"+urlkeyw.slice(3, 5)+"-"+urlkeyw.slice(5, 7);
+  date = "20"+urlkeyw.slice(1, 3)+"-"+urlkeyw.slice(3, 5)+"-"+urlkeyw.slice(5, 7);
 } else{
   date = d.getFullYear()+"-"+(m[d.getMonth()])+"-"+d.getDate();
 }
